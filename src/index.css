@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Import your custom fonts. */
+@font-face {
+    font-family: 'customfont';
+    src: url('./assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* This line is required in Tailwind v4 — without it, dark mode toggle won’t work from the website (it only works using device theme). */
+@custom-variant dark (&:is(.dark *));
+
+
+
+/*  Set custom font in overall content......... */
+:root {
+    --font-customfont: 'customfont', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+body {
+    font-family: var(--font-customfont);
+}
