@@ -77,7 +77,7 @@ const renderCustomLabel = ({ cx, cy, midAngle, outerRadius, percent, index, inne
     const y = cy + labelRadius * Math.sin(-midAngle * RADIAN)
 
     const percentage = (percent * 100).toFixed(1)
-    const sign = index === 0 ? '+' : '-'
+    const sign = index === 0 ? '+' : ''
 
     // Adjust dot size relative to chart size
     const dotRadius = Math.max(4, outerRadius * 0.055)
