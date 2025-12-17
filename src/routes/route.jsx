@@ -6,27 +6,49 @@ import Login from "../features/auth/Login";
 import ForgotPassword from "../features/auth/ForgotPassword";
 import OtpVerification from "../features/auth/OtpVerification";
 import SetNewPassword from "../features/auth/SetNewPassword";
+import DashboardLayout from "../features/dashboard/DashboardLayout";
+import Dashboard from "../features/dashboard/Dashboard";
+import UserManagement from "../features/userManagement/UserManagement";
+import Subscription from "../features/subscription/Subscription";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Login></Login>,
+        element: <Login />,
     },
     {
         path: "/login",
-        element: <Login></Login>,
+        element: <Login />,
     },
     {
         path: "/forgot-password",
-        element: <ForgotPassword></ForgotPassword>,
+        element: <ForgotPassword />,
     },
     {
         path: "/otp-verification",
-        element: <OtpVerification></OtpVerification>,
+        element: <OtpVerification />,
     },
     {
         path: "/set-new-password",
-        element: <SetNewPassword></SetNewPassword>,
+        element: <SetNewPassword />,
+    },
+    {
+        path: "/",
+        element: <DashboardLayout />,
+        children: [
+            {
+                path: "dashboard",
+                element: <Dashboard />,
+            },
+            {
+                path: "user-management",
+                element: <UserManagement />,
+            },
+            {
+                path: "subscription",
+                element: <Subscription />,
+            },
+        ],
     },
 ]);
 
