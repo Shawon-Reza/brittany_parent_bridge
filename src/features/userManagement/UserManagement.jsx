@@ -13,9 +13,9 @@ const UserManagement = () => {
   }
 
   return (
-    <div className="p-8">
+    <div className="px-5 md:px-6 lg:px-7">
       {/* User Management header */}
-      <div>
+      <div className='my-5'> 
         <UserManagementHeader></UserManagementHeader>
       </div>
       {/* Searchbar */}

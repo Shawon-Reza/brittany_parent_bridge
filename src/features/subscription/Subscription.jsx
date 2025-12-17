@@ -1,15 +1,36 @@
 import React from 'react'
+import SubscriptionHeader from './SubscriptionHeader'
+import SubscriptionCard from './SubscriptionCard'
 
 const Subscription = () => {
+  const handleEdit = (subscription) => {
+    // Implement edit logic - navigate to edit form or open modal
+    console.log('Edit subscription:', subscription)
+  }
+
+  const handleDelete = (subscription) => {
+    // Implement delete logic - show confirmation modal
+    console.log('Delete subscription:', subscription)
+  }
+
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold text-neutral-900">Subscription</h1>
-      <p className="text-neutral-500 mt-2">Manage subscription plans and billing</p>
-      
-      <div className="mt-8">
-        <div className="bg-white rounded-lg border border-neutral-200 p-6">
-          <p className="text-neutral-600">Subscription content goes here...</p>
-        </div>
+    <div className="px-5 md:px-6 lg:px-7">
+      {/* Subscription Header */}
+      <div className="mt-5">
+        <SubscriptionHeader />
+      </div>
+
+      {/* Subscription Cards - handles data fetching and rendering internally */}
+      <div className="mt-8 max-w-5xl xl:max-w-7xl mx-auto">
+        <SubscriptionCard 
+          onEdit={handleEdit}
+          onDelete={handleDelete}
+          // For backend integration, pass one of these:
+          // data={subscriptionsData}
+          // OR
+          // queryKey={['subscriptions']}
+          // queryFn={fetchSubscriptions}
+        />
       </div>
     </div>
   )

@@ -13,9 +13,9 @@ import { TbLayoutSidebarLeftCollapse, TbLayoutSidebarRightCollapse } from 'react
  * - avatarUrl?: string (user avatar image url)
  */
 
-const UserManagementHeader = ({
-    title = 'User Management',
-    subtitle = 'Manage and view all user details',
+const SubscriptionHeader = ({
+    title = 'Subscription Plans',
+    subtitle = 'Manage and create subscription plans',
     avatarUrl,
 }) => {
     const { toggleSidebar, isCollapsed } = useTheme()
@@ -57,4 +57,4 @@ const UserManagementHeader = ({
     )
 }
 
-export default UserManagementHeader
+export default SubscriptionHeader
